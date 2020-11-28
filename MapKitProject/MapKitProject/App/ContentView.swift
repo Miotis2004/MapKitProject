@@ -34,59 +34,7 @@ struct ContentView: View {
                                 .foregroundColor(.black)
                         })
                     }
-                    
-    //                Button(action: {
-    //                    destCity = Location(id: Cities().cottageGrove.id, name: Cities().cottageGrove.name, latitude: Cities().cottageGrove.latitude, longitude: Cities().cottageGrove.longitude)
-    //
-    //                    citySelected.toggle()
-    //                }, label: {
-    //                    Text("Cottage Grove, OR")
-    //                        .font(.system(size: 30))
-    //                        .fontWeight(.bold)
-    //                        .foregroundColor(.black)
-    //                })
-    //
-    //                Button(action: {
-    //                    destCity = Location(id: Cities().newYork.id, name: Cities().newYork.name, latitude: Cities().newYork.latitude, longitude: Cities().newYork.longitude)
-    //                    citySelected.toggle()
-    //                }, label: {
-    //                    Text("New York, NY")
-    //                        .font(.system(size: 30))
-    //                        .fontWeight(.bold)
-    //                        .foregroundColor(.black)
-    //                })
-    //
-    //                Button(action: {
-    //                    destCity = Location(id: Cities().boston.id, name: Cities().boston.name, latitude: Cities().boston.latitude, longitude: Cities().boston.longitude)
-    //                    citySelected.toggle()
-    //                }, label: {
-    //                    Text("Boston, MA")
-    //                        .font(.system(size: 30))
-    //                        .fontWeight(.bold)
-    //                        .foregroundColor(.black)
-    //                })
-    //
-    //                Button(action: {
-    //                    destCity = Location(id: Cities().chicago.id, name: Cities().chicago.name, latitude: Cities().chicago.latitude, longitude: Cities().chicago.longitude)
-    //                    citySelected.toggle()
-    //                }, label: {
-    //                    Text("Chicago, IL")
-    //                        .font(.system(size: 30))
-    //                        .fontWeight(.bold)
-    //                        .foregroundColor(.black)
-    //                })
-    //
-    //                Button(action: {
-    //                    destCity = Location(id: Cities().losAngeles.id, name: Cities().losAngeles.name, latitude: Cities().losAngeles.latitude, longitude: Cities().losAngeles.longitude)
-    //                    citySelected.toggle()
-    //                }, label: {
-    //                    Text("Los Angeles, CA")
-    //                        .font(.system(size: 30))
-    //                        .fontWeight(.bold)
-    //                        .foregroundColor(.black)
-    //                })
-                    
-                }
+              }
             }
         } else {
             ShowRoute(destCity: $destCity, citySelected: $citySelected)
