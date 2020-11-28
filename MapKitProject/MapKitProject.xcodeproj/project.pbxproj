@@ -11,6 +11,9 @@
 		FDAA7AF02572DBE9000D80F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAA7AEF2572DBE9000D80F3 /* ContentView.swift */; };
 		FDAA7AF22572DBE9000D80F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDAA7AF12572DBE9000D80F3 /* Assets.xcassets */; };
 		FDAA7AF52572DBE9000D80F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDAA7AF42572DBE9000D80F3 /* Preview Assets.xcassets */; };
+		FDAA7B012572DDB6000D80F3 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAA7B002572DDB6000D80F3 /* MapView.swift */; };
+		FDAA7B062572E25B000D80F3 /* MapViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAA7B052572E25B000D80F3 /* MapViewCoordinator.swift */; };
+		FDCFFA3D2572EA1C0035DEDC /* ShowRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFFA3C2572EA1C0035DEDC /* ShowRoute.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		FDAA7AF12572DBE9000D80F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDAA7AF42572DBE9000D80F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FDAA7AF62572DBE9000D80F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDAA7B002572DDB6000D80F3 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		FDAA7B052572E25B000D80F3 /* MapViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCoordinator.swift; sourceTree = "<group>"; };
+		FDCFFA3C2572EA1C0035DEDC /* ShowRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRoute.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,10 +58,11 @@
 		FDAA7AEC2572DBE9000D80F3 /* MapKitProject */ = {
 			isa = PBXGroup;
 			children = (
-				FDAA7AED2572DBE9000D80F3 /* MapKitProjectApp.swift */,
-				FDAA7AEF2572DBE9000D80F3 /* ContentView.swift */,
+				FDAA7B042572E240000D80F3 /* Helpers */,
+				FDAA7AFF2572DD77000D80F3 /* Utils */,
+				FDAA7AFE2572DD6F000D80F3 /* Views */,
+				FDAA7AFD2572DD66000D80F3 /* App */,
 				FDAA7AF12572DBE9000D80F3 /* Assets.xcassets */,
-				FDAA7AF62572DBE9000D80F3 /* Info.plist */,
 				FDAA7AF32572DBE9000D80F3 /* Preview Content */,
 			);
 			path = MapKitProject;
@@ -67,6 +74,40 @@
 				FDAA7AF42572DBE9000D80F3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FDAA7AFD2572DD66000D80F3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FDAA7AED2572DBE9000D80F3 /* MapKitProjectApp.swift */,
+				FDAA7AEF2572DBE9000D80F3 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FDAA7AFE2572DD6F000D80F3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FDAA7B002572DDB6000D80F3 /* MapView.swift */,
+				FDCFFA3C2572EA1C0035DEDC /* ShowRoute.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FDAA7AFF2572DD77000D80F3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FDAA7AF62572DBE9000D80F3 /* Info.plist */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FDAA7B042572E240000D80F3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FDAA7B052572E25B000D80F3 /* MapViewCoordinator.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +179,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDCFFA3D2572EA1C0035DEDC /* ShowRoute.swift in Sources */,
+				FDAA7B062572E25B000D80F3 /* MapViewCoordinator.swift in Sources */,
 				FDAA7AF02572DBE9000D80F3 /* ContentView.swift in Sources */,
+				FDAA7B012572DDB6000D80F3 /* MapView.swift in Sources */,
 				FDAA7AEE2572DBE9000D80F3 /* MapKitProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,7 +314,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MapKitProject/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = MapKitProject/Info.plist;
+				INFOPLIST_FILE = MapKitProject/Utils/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -291,7 +335,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MapKitProject/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = MapKitProject/Info.plist;
+				INFOPLIST_FILE = MapKitProject/Utils/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
