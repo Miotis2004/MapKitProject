@@ -14,6 +14,9 @@
 		FDAA7B012572DDB6000D80F3 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAA7B002572DDB6000D80F3 /* MapView.swift */; };
 		FDAA7B062572E25B000D80F3 /* MapViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAA7B052572E25B000D80F3 /* MapViewCoordinator.swift */; };
 		FDCFFA3D2572EA1C0035DEDC /* ShowRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFFA3C2572EA1C0035DEDC /* ShowRoute.swift */; };
+		FDCFFA412572EC420035DEDC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFFA402572EC420035DEDC /* Location.swift */; };
+		FDCFFA452572ED040035DEDC /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFFA442572ED040035DEDC /* Cities.swift */; };
+		FDCFFA482572F4E30035DEDC /* DestinationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFFA472572F4E30035DEDC /* DestinationPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		FDAA7B002572DDB6000D80F3 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		FDAA7B052572E25B000D80F3 /* MapViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCoordinator.swift; sourceTree = "<group>"; };
 		FDCFFA3C2572EA1C0035DEDC /* ShowRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRoute.swift; sourceTree = "<group>"; };
+		FDCFFA402572EC420035DEDC /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		FDCFFA442572ED040035DEDC /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
+		FDCFFA472572F4E30035DEDC /* DestinationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		FDAA7AEC2572DBE9000D80F3 /* MapKitProject */ = {
 			isa = PBXGroup;
 			children = (
+				FDCFFA3F2572EC2D0035DEDC /* Models */,
 				FDAA7B042572E240000D80F3 /* Helpers */,
 				FDAA7AFF2572DD77000D80F3 /* Utils */,
 				FDAA7AFE2572DD6F000D80F3 /* Views */,
@@ -90,6 +97,7 @@
 			children = (
 				FDAA7B002572DDB6000D80F3 /* MapView.swift */,
 				FDCFFA3C2572EA1C0035DEDC /* ShowRoute.swift */,
+				FDCFFA472572F4E30035DEDC /* DestinationPickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -106,8 +114,17 @@
 			isa = PBXGroup;
 			children = (
 				FDAA7B052572E25B000D80F3 /* MapViewCoordinator.swift */,
+				FDCFFA442572ED040035DEDC /* Cities.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FDCFFA3F2572EC2D0035DEDC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FDCFFA402572EC420035DEDC /* Location.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,9 +197,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDCFFA3D2572EA1C0035DEDC /* ShowRoute.swift in Sources */,
+				FDCFFA482572F4E30035DEDC /* DestinationPickerView.swift in Sources */,
 				FDAA7B062572E25B000D80F3 /* MapViewCoordinator.swift in Sources */,
 				FDAA7AF02572DBE9000D80F3 /* ContentView.swift in Sources */,
 				FDAA7B012572DDB6000D80F3 /* MapView.swift in Sources */,
+				FDCFFA452572ED040035DEDC /* Cities.swift in Sources */,
+				FDCFFA412572EC420035DEDC /* Location.swift in Sources */,
 				FDAA7AEE2572DBE9000D80F3 /* MapKitProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

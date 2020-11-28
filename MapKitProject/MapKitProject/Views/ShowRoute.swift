@@ -11,18 +11,31 @@ struct ShowRoute: View {
     @State private var directions: [String] = []
     @State private var showDirections = false
     
+    @Binding var destCity: Location
+    @Binding var citySelected: Bool
+    
     var body: some View {
         Group {
             VStack {
-                MapView(directions: $directions)
+                MapView(directions: $directions, destCity: $destCity)
                 
-                Button(action: {
-                    self.showDirections.toggle()
-                }, label: {
-                    Text("Show Directions")
-                })
-                .disabled(directions.isEmpty)
-                .padding()
+                HStack {
+                    Button(action: {
+                        self.showDirections.toggle()
+                    }, label: {
+                        Text("Show Directions")
+                    })
+                    .disabled(directions.isEmpty)
+                    .padding()
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        citySelected = false
+                    }, label: {
+                        Image(systemName: "xmark")
+                    })
+                }
             }
             .sheet(isPresented: $showDirections) {
                 VStack {
@@ -45,8 +58,8 @@ struct ShowRoute: View {
     }
 }
 
-struct ShowRoute_Previews: PreviewProvider {
-    static var previews: some View {
-        ShowRoute()
-    }
-}
+//struct ShowRoute_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ShowRoute(destCity: Cities().boston)
+//    }
+//}

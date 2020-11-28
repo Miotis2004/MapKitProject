@@ -10,6 +10,7 @@ import MapKit
 
 struct MapView: UIViewRepresentable {
     @Binding var directions: [String]
+    @Binding var destCity: Location
     
     typealias UIViewType = MKMapView
     
@@ -25,11 +26,11 @@ struct MapView: UIViewRepresentable {
         
         mapView.setRegion(region, animated: true)
         
-        //Atlanta Placemark
+        //Atlanta Placemark - Starting Placemark
         let placemarkAtlanta = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 33.7490, longitude: -84.3880))
         
-        //Cottage Grove Placemark
-        let placemarkOregon = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 43.7976, longitude: -123.0595))
+        //Destination Placemark
+        let placemarkOregon = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: destCity.latitude, longitude: destCity.longitude))
         
         let request = MKDirections.Request()
         request.source = MKMapItem(placemark: placemarkAtlanta)
