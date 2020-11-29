@@ -10,6 +10,7 @@ import MapKit
 
 struct MapView: UIViewRepresentable {
     @Binding var directions: [String]
+    @Binding var tripDist: [Double]
     @Binding var destCity: Location
     @Binding var originCity: Location
     
@@ -50,6 +51,7 @@ struct MapView: UIViewRepresentable {
             mapView.setVisibleMapRect(route.polyline.boundingMapRect, edgePadding: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20), animated: true)
             
             self.directions = route.steps.map { $0.instructions }.filter { !$0.isEmpty }
+            self.tripDist = route.steps.map { $0.distance }
         }
         
         return mapView

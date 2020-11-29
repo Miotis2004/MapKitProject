@@ -10,6 +10,7 @@ import SwiftUI
 struct ShowRoute: View {
     @State private var directions: [String] = []
     @State private var showDirections = false
+    @State private var tripDist: [Double] = []
     
     @Binding var destCity: Location
     @Binding var originCity: Location
@@ -19,7 +20,7 @@ struct ShowRoute: View {
     var body: some View {
         Group {
             VStack {
-                MapView(directions: $directions, destCity: $destCity, originCity: $originCity)
+                MapView(directions: $directions, tripDist: $tripDist, destCity: $destCity, originCity: $originCity)
                 
                 HStack {
                     Button(action: {
@@ -51,8 +52,14 @@ struct ShowRoute: View {
                     
                     List {
                         ForEach(0..<self.directions.count, id:\.self) { direction in
-                            Text("\(self.directions[direction])")
-                                .padding()
+                            HStack {
+                                Text("\(self.directions[direction])")
+                                    .padding()
+                                Spacer()
+                                //Text(" \(tripDist[direction].rounded())mi")
+                                Text("\(String(format: "%.2f", (tripDist[direction]/1000))) mi")
+                            }
+                            
                         }
                     }
                 }
