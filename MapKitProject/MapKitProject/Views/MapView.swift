@@ -11,6 +11,7 @@ import MapKit
 struct MapView: UIViewRepresentable {
     @Binding var directions: [String]
     @Binding var destCity: Location
+    @Binding var originCity: Location
     
     typealias UIViewType = MKMapView
     
@@ -22,19 +23,19 @@ struct MapView: UIViewRepresentable {
         let mapView = MKMapView()
         mapView.delegate = context.coordinator
         
-        let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 33.7490, longitude: -84.3880), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+        let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: originCity.lat, longitude: originCity.lng), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
         
         mapView.setRegion(region, animated: true)
         
         //Atlanta Placemark - Starting Placemark
-        let placemarkAtlanta = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 33.7490, longitude: -84.3880))
+        let placemarkOrigin = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: originCity.lat, longitude: originCity.lng))
         
         //Destination Placemark
-        let placemarkOregon = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: destCity.lat, longitude: destCity.lng))
+        let placemarkDestination = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: destCity.lat, longitude: destCity.lng))
         
         let request = MKDirections.Request()
-        request.source = MKMapItem(placemark: placemarkAtlanta)
-        request.destination = MKMapItem(placemark: placemarkOregon)
+        request.source = MKMapItem(placemark: placemarkOrigin)
+        request.destination = MKMapItem(placemark: placemarkDestination)
         request.transportType = .automobile
         
         let directions = MKDirections(request: request)
@@ -42,7 +43,7 @@ struct MapView: UIViewRepresentable {
         directions.calculate { response, error in
             guard let route = response?.routes.first else { return }
             
-            mapView.addAnnotations([placemarkAtlanta, placemarkOregon])
+            mapView.addAnnotations([placemarkOrigin, placemarkDestination])
             
             mapView.addOverlay(route.polyline)
             

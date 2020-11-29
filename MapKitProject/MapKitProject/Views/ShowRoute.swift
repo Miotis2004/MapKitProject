@@ -12,12 +12,14 @@ struct ShowRoute: View {
     @State private var showDirections = false
     
     @Binding var destCity: Location
+    @Binding var originCity: Location
     @Binding var citySelected: Bool
+    @Binding var originSelected: Bool
     
     var body: some View {
         Group {
             VStack {
-                MapView(directions: $directions, destCity: $destCity)
+                MapView(directions: $directions, destCity: $destCity, originCity: $originCity)
                 
                 HStack {
                     Button(action: {
@@ -32,6 +34,7 @@ struct ShowRoute: View {
                     
                     Button(action: {
                         citySelected = false
+                        originSelected = false
                     }, label: {
                         Image(systemName: "xmark")
                     })

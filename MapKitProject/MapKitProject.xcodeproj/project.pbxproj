@@ -17,7 +17,6 @@
 		FDCFFA3D2572EA1C0035DEDC /* ShowRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFFA3C2572EA1C0035DEDC /* ShowRoute.swift */; };
 		FDCFFA412572EC420035DEDC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFFA402572EC420035DEDC /* Location.swift */; };
 		FDCFFA452572ED040035DEDC /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFFA442572ED040035DEDC /* Cities.swift */; };
-		FDCFFA482572F4E30035DEDC /* DestinationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFFA472572F4E30035DEDC /* DestinationPickerView.swift */; };
 		FDD5CDAB257354C4002EDF2C /* csvjson.json in Resources */ = {isa = PBXBuildFile; fileRef = FDD5CDAA257354C4002EDF2C /* csvjson.json */; };
 		FDD5CDAF25735FF7002EDF2C /* CodableBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD5CDAE25735FF7002EDF2C /* CodableBundleExtension.swift */; };
 /* End PBXBuildFile section */
@@ -35,7 +34,6 @@
 		FDCFFA3C2572EA1C0035DEDC /* ShowRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRoute.swift; sourceTree = "<group>"; };
 		FDCFFA402572EC420035DEDC /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		FDCFFA442572ED040035DEDC /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
-		FDCFFA472572F4E30035DEDC /* DestinationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationPickerView.swift; sourceTree = "<group>"; };
 		FDD5CDAA257354C4002EDF2C /* csvjson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = csvjson.json; sourceTree = "<group>"; };
 		FDD5CDAE25735FF7002EDF2C /* CodableBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBundleExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,7 +102,6 @@
 			children = (
 				FDAA7B002572DDB6000D80F3 /* MapView.swift */,
 				FDCFFA3C2572EA1C0035DEDC /* ShowRoute.swift */,
-				FDCFFA472572F4E30035DEDC /* DestinationPickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,7 +213,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDCFFA3D2572EA1C0035DEDC /* ShowRoute.swift in Sources */,
-				FDCFFA482572F4E30035DEDC /* DestinationPickerView.swift in Sources */,
 				FDAA7B062572E25B000D80F3 /* MapViewCoordinator.swift in Sources */,
 				FDAA7AF02572DBE9000D80F3 /* ContentView.swift in Sources */,
 				FDAA7B012572DDB6000D80F3 /* MapView.swift in Sources */,
