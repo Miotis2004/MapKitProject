@@ -9,32 +9,32 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let cityList: [Location] = [Cities().boston, Cities().chicago, Cities().cottageGrove, Cities().losAngeles, Cities().newYork, Cities().newOrleans, Cities().sanFrancisco, Cities().seattle, Cities().philadelphia, Cities().houston, Cities().dallas, Cities().denver, Cities().detroit, Cities().pheonix, Cities().washingtonDC]
+    var cityList: [Location] = Bundle.main.decode("cities.json")
 
-    
-    @State private var destCity: Location = Location(id: Cities().boston.id, name: Cities().boston.name, latitude: Cities().boston.latitude, longitude: Cities().boston.longitude)
+    @State private var destCity: Location = Location(city: "Cottage Grove", state_id: "OR", lat: 45.0, lng: 122.3,  id: 0)
     
     @State private var citySelected = false
     
     var body: some View {
+        
         if !citySelected {
+            
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 40) {
                     
-                    ForEach(cityList, id: \.self) { city in
+                    ForEach(cityList) { city in
                         Button(action: {
-                            destCity = Location(id: city.id, name: city.name, latitude: city.latitude, longitude: city.longitude)
-                            
-                            citySelected.toggle()
+                            destCity = Location(city: city.city,  state_id: city.state_id,  lat: city.lat, lng: city.lng, id: city.id)
+                                                        citySelected.toggle()
                         }, label: {
-                            Text(city.name)
+                            Text("\(city.city), \(city.state_id)")
                                 .font(.system(size: 30))
                                 .fontWeight(.bold)
                                 .foregroundColor(.black)
                         })
                     }
-              }
+                }
             }
         } else {
             ShowRoute(destCity: $destCity, citySelected: $citySelected)

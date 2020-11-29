@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD28C3602573F0D1009AC8E5 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = FD28C35F2573F0D1009AC8E5 /* cities.json */; };
 		FDAA7AEE2572DBE9000D80F3 /* MapKitProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAA7AED2572DBE9000D80F3 /* MapKitProjectApp.swift */; };
 		FDAA7AF02572DBE9000D80F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAA7AEF2572DBE9000D80F3 /* ContentView.swift */; };
 		FDAA7AF22572DBE9000D80F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDAA7AF12572DBE9000D80F3 /* Assets.xcassets */; };
@@ -17,9 +18,12 @@
 		FDCFFA412572EC420035DEDC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFFA402572EC420035DEDC /* Location.swift */; };
 		FDCFFA452572ED040035DEDC /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFFA442572ED040035DEDC /* Cities.swift */; };
 		FDCFFA482572F4E30035DEDC /* DestinationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCFFA472572F4E30035DEDC /* DestinationPickerView.swift */; };
+		FDD5CDAB257354C4002EDF2C /* csvjson.json in Resources */ = {isa = PBXBuildFile; fileRef = FDD5CDAA257354C4002EDF2C /* csvjson.json */; };
+		FDD5CDAF25735FF7002EDF2C /* CodableBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD5CDAE25735FF7002EDF2C /* CodableBundleExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD28C35F2573F0D1009AC8E5 /* cities.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 		FDAA7AEA2572DBE9000D80F3 /* MapKitProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapKitProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDAA7AED2572DBE9000D80F3 /* MapKitProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitProjectApp.swift; sourceTree = "<group>"; };
 		FDAA7AEF2572DBE9000D80F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +36,8 @@
 		FDCFFA402572EC420035DEDC /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		FDCFFA442572ED040035DEDC /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
 		FDCFFA472572F4E30035DEDC /* DestinationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationPickerView.swift; sourceTree = "<group>"; };
+		FDD5CDAA257354C4002EDF2C /* csvjson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = csvjson.json; sourceTree = "<group>"; };
+		FDD5CDAE25735FF7002EDF2C /* CodableBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBundleExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 		FDAA7AEC2572DBE9000D80F3 /* MapKitProject */ = {
 			isa = PBXGroup;
 			children = (
+				FDD5CDAD25735FD5002EDF2C /* Extensions */,
 				FDCFFA3F2572EC2D0035DEDC /* Models */,
 				FDAA7B042572E240000D80F3 /* Helpers */,
 				FDAA7AFF2572DD77000D80F3 /* Utils */,
@@ -113,8 +120,10 @@
 		FDAA7B042572E240000D80F3 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FDD5CDAA257354C4002EDF2C /* csvjson.json */,
 				FDAA7B052572E25B000D80F3 /* MapViewCoordinator.swift */,
 				FDCFFA442572ED040035DEDC /* Cities.swift */,
+				FD28C35F2573F0D1009AC8E5 /* cities.json */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -125,6 +134,14 @@
 				FDCFFA402572EC420035DEDC /* Location.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FDD5CDAD25735FD5002EDF2C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FDD5CDAE25735FF7002EDF2C /* CodableBundleExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,8 +201,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD28C3602573F0D1009AC8E5 /* cities.json in Resources */,
 				FDAA7AF52572DBE9000D80F3 /* Preview Assets.xcassets in Resources */,
 				FDAA7AF22572DBE9000D80F3 /* Assets.xcassets in Resources */,
+				FDD5CDAB257354C4002EDF2C /* csvjson.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +223,7 @@
 				FDCFFA452572ED040035DEDC /* Cities.swift in Sources */,
 				FDCFFA412572EC420035DEDC /* Location.swift in Sources */,
 				FDAA7AEE2572DBE9000D80F3 /* MapKitProjectApp.swift in Sources */,
+				FDD5CDAF25735FF7002EDF2C /* CodableBundleExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

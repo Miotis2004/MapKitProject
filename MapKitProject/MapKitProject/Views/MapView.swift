@@ -30,7 +30,7 @@ struct MapView: UIViewRepresentable {
         let placemarkAtlanta = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 33.7490, longitude: -84.3880))
         
         //Destination Placemark
-        let placemarkOregon = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: destCity.latitude, longitude: destCity.longitude))
+        let placemarkOregon = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: destCity.lat, longitude: destCity.lng))
         
         let request = MKDirections.Request()
         request.source = MKMapItem(placemark: placemarkAtlanta)

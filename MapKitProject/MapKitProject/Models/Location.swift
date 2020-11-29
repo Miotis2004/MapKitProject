@@ -7,9 +7,24 @@
 
 import Foundation
 
-struct Location: Hashable, Identifiable {
-    var id = UUID().uuidString
-    var name: String
-    var latitude: Double
-    var longitude: Double
+struct Location: Codable, Hashable, Identifiable {
+    
+    var city: String
+    //var city_ascii: String
+    var state_id: String
+    //var state_name: String
+    //var county_fips: Int
+    //var county_name: String
+    var lat: Double
+    var lng: Double
+    //var population: Int
+    //var density: Int
+    //var source: String
+    //var military: String
+    //var incorporated: String
+    //var timezone: String
+    //var ranking: Int
+    //var zips: String
+    var id: Int
+    
 }
