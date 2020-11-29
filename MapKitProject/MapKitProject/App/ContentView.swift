@@ -18,21 +18,23 @@ struct ContentView: View {
     var body: some View {
         
         if !citySelected {
-            
-            
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack(spacing: 40) {
-                    
-                    ForEach(cityList) { city in
-                        Button(action: {
-                            destCity = Location(city: city.city,  state_id: city.state_id,  lat: city.lat, lng: city.lng, id: city.id)
-                                                        citySelected.toggle()
-                        }, label: {
-                            Text("\(city.city), \(city.state_id)")
-                                .font(.system(size: 30))
-                                .fontWeight(.bold)
-                                .foregroundColor(.black)
-                        })
+            let sortedCities = cityList.sorted(by: { $0.city < $1.city })
+            VStack {
+                Text("Select Destination")
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack(spacing: 40) {
+                        
+                        ForEach(sortedCities) { city in
+                            Button(action: {
+                                destCity = Location(city: city.city,  state_id: city.state_id,  lat: city.lat, lng: city.lng, id: city.id)
+                                                            citySelected.toggle()
+                            }, label: {
+                                Text("\(city.city), \(city.state_id)")
+                                    .font(.system(size: 30))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.black)
+                            })
+                        }
                     }
                 }
             }
