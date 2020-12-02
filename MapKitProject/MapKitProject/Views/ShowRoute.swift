@@ -68,8 +68,3 @@ struct ShowRoute: View {
     }
 }
 
-//struct ShowRoute_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ShowRoute(destCity: Cities().boston)
-//    }
-//}

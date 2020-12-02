@@ -30,7 +30,7 @@ struct ContentView: View {
     }
     
     var body: some View {
-        
+            
         if !originSelected {
             let sortedCities = cityList.sorted(by: { $0.city < $1.city })
             VStack {
@@ -112,6 +112,8 @@ struct ContentView: View {
             }
         }
     }
+    
+        
 }
 
 struct ContentView_Previews: PreviewProvider {
